@@ -1,2 +1,2 @@
-# python
-All my python projects
+# All exercisev ive done for Softuni
+

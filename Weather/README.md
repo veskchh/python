@@ -1,0 +1,1 @@
+A very basic weather app that asks for a city and then displays current temperature and a weather summary. A personal api needs to be created from https://www.meteosource.com/

@@ -2,10 +2,24 @@ from book import Book
 from library import Library
 import time
 
-lib_name = input("What is the name of the library?: ")
-lib_capcacity = int(input(f"What is the capacity of {lib_name}?: "))
+while True:
+    lib_name = input("What is the name of the library?: ").strip()
+    if not lib_name:
+        print("\nLibrary name cannot be empty!")
+        continue
 
-library = Library(lib_name, lib_capcacity)
+    try:
+        lib_capcacity = int(input(f"What is the capacity of {lib_name}?: "))
+    except:
+        print("Capacity must be a number!")
+        continue
+
+    if lib_name.strip() and 0 < lib_capcacity:
+        library = Library(lib_name, lib_capcacity)
+        break
+    else:
+        print("\nEnter valid arguments for name and capacity!")
+        time.sleep(1)
 
 print(f"Created library with name: {lib_name} and capacity: {lib_capcacity}")
 time.sleep(1)

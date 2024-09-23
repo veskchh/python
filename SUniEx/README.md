@@ -1,2 +1,2 @@
-# All exercisev ive done for Softuni
+# All projects ive done at Softuni
 

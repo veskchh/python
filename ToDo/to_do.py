@@ -1,10 +1,8 @@
 from task_functions import add_task, remove_task, view_tasks, complete_task
-import time
 
 
 tasks = []
 while True:
-    time.sleep(1.5)
     print("\nTo-Do List")
     print("1. Add Task")
     print("2. View Tasks")
@@ -14,7 +12,6 @@ while True:
     choice = int(input("Choose an option: "))
     if not 0 < choice < 6:
         print("Choose a valid command.(1-5)")
-        time.sleep(1)
         continue
     
     choice = int(choice)
@@ -25,6 +22,7 @@ while True:
     elif choice == 2:
         view_tasks(tasks)
     elif choice == 3:
+        view_tasks(tasks)
         task_num = int(input("What is the number of the task you want to remove?: "))
         remove_task(tasks, task_num)
     elif choice == 4:
@@ -32,7 +30,6 @@ while True:
         complete_task(tasks, task_num)
     elif choice == 5:
         print("Exiting...")
-        time.sleep(1)
         break
     
 
